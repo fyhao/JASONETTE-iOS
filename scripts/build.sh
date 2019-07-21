@@ -16,7 +16,7 @@ echo "*********************"
 cd app && xcodebuild \
   -workspace Jasonette.xcworkspace \
   -scheme Jasonette \
-  -sdk iphoneos11 \
+  -sdk iphoneos12.1 \
   -configuration Release \
   -archivePath $ARCHIVE_NAME.xcarchive \
   PROVISIONING_PROFILE="b3c27c8a-4dda-4202-8f53-a752e20add13" \
