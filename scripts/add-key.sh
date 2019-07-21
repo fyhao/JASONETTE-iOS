@@ -1,4 +1,11 @@
 #!/bin/sh
+
+# decrypt key
+openssl version
+openssl smime -decrypt -in scripts/certs/dist.cer.enc -binary -inform DEM -inkey scripts/key/private-key.pem -out scripts/certs/dist.cer
+openssl smime -decrypt -in scripts/certs/dist.p12.enc -binary -inform DEM -inkey scripts/key/private-key.pem -out scripts/certs/dist.p12
+openssl smime -decrypt -in scripts/profile/$PROFILE_NAME.mobileprovision.enc -binary -inform DEM -inkey scripts/key/private-key.pem -out scripts/profile/$PROFILE_NAME.mobileprovision
+
 # Create a custom keychain
 security create-keychain -p travis ios-build.keychain
 # Make the custom keychain default, so xcodebuild will use it for signing
