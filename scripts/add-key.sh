@@ -1,4 +1,7 @@
 #!/bin/sh
+# housekeeping first
+security delete-keychain ios-build.keychain
+rm -f "~/Library/MobileDevice/Provisioning\ Profiles"
 
 # decrypt key
 openssl version
