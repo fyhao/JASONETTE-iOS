@@ -10,6 +10,8 @@ cp ./scripts/profile/$PROFILE_NAME.mobileprovision ~/Library/MobileDevice/Provis
 echo "*********************"
 echo "*     Archiving     *"
 echo "*********************"
+echo "TESTING list scheme"
+xcrun xcodebuild -workspace app/Jasonette.xcworkspace -list
 xcrun xcodebuild -workspace app/Jasonette.xcworkspace -scheme Jasonette\ Stg -archivePath $ARCHIVE_NAME.xcarchive archive
 echo "**********************"
 echo "*     Exporting      *"
