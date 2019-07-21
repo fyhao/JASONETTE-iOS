@@ -1133,7 +1133,7 @@
 				);
 				INFOPLIST_FILE = Jasonette/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jasonette.seed;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fyhao.jasonelle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1154,7 +1154,7 @@
 				);
 				INFOPLIST_FILE = Jasonette/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jasonette.seed;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fyhao.jasonelle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
