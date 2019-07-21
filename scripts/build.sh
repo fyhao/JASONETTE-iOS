@@ -10,8 +10,8 @@ cp ./scripts/profile/$PROFILE_NAME.mobileprovision ~/Library/MobileDevice/Provis
 echo "*********************"
 echo "*     Archiving     *"
 echo "*********************"
-xcrun xcodebuild -workspace app/Jasonette.xcworkspace -scheme Jasonette -archivePath $ARCHIVE_NAME.xcarchive archive | sed -nE '/error:/,/^[[:digit:]] errors? generated/ p'
+xcrun xcodebuild -workspace app/Jasonette.xcworkspace -scheme Jasonette -archivePath $ARCHIVE_NAME.xcarchive archive | egrep '^(/.+:[0-9+:[0-9]+:.(error|warning):|fatal|===)' -
 echo "**********************"
 echo "*     Exporting      *"
 echo "**********************"
-xcrun xcodebuild -exportArchive -archivePath $ARCHIVE_NAME.xcarchive -exportPath . -exportOptionsPlist ExportOptions.plist | sed -nE '/error:/,/^[[:digit:]] errors? generated/ p'
+xcrun xcodebuild -exportArchive -archivePath $ARCHIVE_NAME.xcarchive -exportPath . -exportOptionsPlist ExportOptions.plist | egrep '^(/.+:[0-9+:[0-9]+:.(error|warning):|fatal|===)' -
