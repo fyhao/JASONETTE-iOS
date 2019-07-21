@@ -12,7 +12,7 @@ cp ./scripts/profile/$PROFILE_NAME.mobileprovision ~/Library/MobileDevice/Provis
 echo "*********************"
 echo "*     Archiving     *"
 echo "*********************"
-xcrun xcodebuild -workspace app/Jasonette.xcworkspace -scheme Jasonette -archivePath $ARCHIVE_NAME.xcarchive archive CODE_SIGN_IDENTITY=$DEVELOPER_NAME > log1.txt
+xcrun xcodebuild -workspace app/Jasonette.xcworkspace -scheme Jasonette -archivePath $ARCHIVE_NAME.xcarchive archive CODE_SIGN_IDENTITY="iPhone Distribution: Khor Yong Hao (C4F7EVGZVS)" > log1.txt
 echo "**********************"
 echo "*     Exporting      *"
 echo "**********************"
