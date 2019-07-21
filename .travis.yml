@@ -18,10 +18,8 @@ env:
       - IPA_NAME="jasonelle"
       - ARCHIVE_NAME="jasonelle"
       
-os: osx
-osx_image: xcode8
-sudo: false
 language: objective-c
+osx_image: xcode9.3
 
 script:
 - "./scripts/build.sh"
