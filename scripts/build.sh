@@ -4,6 +4,7 @@ if [[ "$TRAVIS_PULL_REQUEST" != "false" ]]; then
   exit 0
 fi
 cd app && pod install
+cd ../
 security list-keychains -s ios-build.keychain
 rm ~/Library/MobileDevice/Provisioning\ Profiles/$PROFILE_NAME.mobileprovision 
 mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles/
