@@ -3,6 +3,7 @@ if [[ "$TRAVIS_PULL_REQUEST" != "false" ]]; then
   echo "This is a pull request. No deployment will be done."
   exit 0
 fi
+cd app && pod install
 security list-keychains -s ios-build.keychain
 rm ~/Library/MobileDevice/Provisioning\ Profiles/$PROFILE_NAME.mobileprovision 
 mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles/
