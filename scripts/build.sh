@@ -13,7 +13,7 @@ echo "*********************"
 echo "*     Archiving     *"
 echo "*********************"
 #xcrun xcodebuild -workspace app/Jasonette.xcworkspace -scheme Jasonette -archivePath $ARCHIVE_NAME.xcarchive archive DEVELOPMENT_TEAM="C4F7EVGZVS" CODE_SIGN_IDENTITY="iPhone Distribution: Khor Yong Hao (C4F7EVGZVS)" PROVISIONING_PROFILE="b3c27c8a-4dda-4202-8f53-a752e20add13" > log1.txt
-xcrun xcodebuild -scheme Jasonette -configuration Release build -project app/Jasonette.xcodeproj -target Jasonette ARCHS="armv7 arm64" VALID_ARCHS="armv7 arm64" -sdk iphoneos DEVELOPMENT_TEAM="C4F7EVGZVS" > log1.txt
+xcrun xcodebuild -configuration Release build -project app/Jasonette.xcodeproj -target Jasonette ARCHS="armv7 arm64" VALID_ARCHS="armv7 arm64" -sdk iphoneos DEVELOPMENT_TEAM="C4F7EVGZVS" > log1.txt
 
 echo "**********************"
 echo "*     Exporting      *"
