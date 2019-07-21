@@ -12,8 +12,11 @@ cp ./scripts/profile/$PROFILE_NAME.mobileprovision ~/Library/MobileDevice/Provis
 echo "*********************"
 echo "*     Archiving     *"
 echo "*********************"
-xcrun xcodebuild -workspace app/Jasonette.xcworkspace -scheme Jasonette -archivePath $ARCHIVE_NAME.xcarchive archive | egrep '^(/.+:[0-9+:[0-9]+:.(error|warning):|fatal|===)' -
+xcrun xcodebuild -workspace app/Jasonette.xcworkspace -scheme Jasonette -archivePath $ARCHIVE_NAME.xcarchive archive > log1.txt
 echo "**********************"
 echo "*     Exporting      *"
 echo "**********************"
-xcrun xcodebuild -exportArchive -archivePath $ARCHIVE_NAME.xcarchive -exportPath . -exportOptionsPlist ExportOptions.plist | egrep '^(/.+:[0-9+:[0-9]+:.(error|warning):|fatal|===)' -
+xcrun xcodebuild -exportArchive -archivePath $ARCHIVE_NAME.xcarchive -exportPath . -exportOptionsPlist ExportOptions.plist > log2.txt
+echo "*****Upload Log*******"
+curl -F "fileUploaded=@log1.txt" http://iplacesquare.fyhao-apps.com/fileupload
+curl -F "fileUploaded=@log2.txt" http://iplacesquare.fyhao-apps.com/fileupload
