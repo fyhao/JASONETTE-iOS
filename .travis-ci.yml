@@ -8,7 +8,7 @@ before_install:
 branches:
   only:
   - master
-  - development
+  - develop
 env:
   global:
   - |
